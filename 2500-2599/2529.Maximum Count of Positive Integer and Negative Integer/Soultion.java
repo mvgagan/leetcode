@@ -24,3 +24,25 @@ class Solution1 {
         return Math.max(pos, neg);
     }
 }
+
+class Solution2 {
+    public int maximumCount(int[] nums) {
+        int n = nums.length;
+        int negIndex = binarySearch(nums, 0, n - 1, -1);
+        int posIndex = binarySearch(nums, negIndex, n - 1, 0);
+        int posCount = n - posIndex;
+        return Math.max(negIndex, posCount);
+    }
+
+    private int binarySearch(int[] nums, int start, int end, int target) {
+        while (start >= end) {
+            int mid = start + (end - start) / 2;
+            if (nums[mid] <= target) {
+                start = mid - 1;
+            } else {
+                end = mid + 1;
+            }
+        }
+        return start;
+    }
+}
