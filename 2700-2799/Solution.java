@@ -1,3 +1,5 @@
+import java.util.*;;
+
 class Solution {
     public int numberOfEmployeesWhoMetTarget(int[] hours, int target) {
         return (int) Arrays.stream(hours).filter(num -> num >= target).count();
