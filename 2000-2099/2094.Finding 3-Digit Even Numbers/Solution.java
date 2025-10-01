@@ -1,12 +1,15 @@
+import java.util.List;
+import java.util.ArrayList;
+
 class Solution {
     public int[] findEvenNumbers(int[] digits) {
         List<Integer> list = new ArrayList<>();
         int[] arr = new int[10];
-        for (int digit: digits) {
+        for (int digit : digits) {
             arr[digit]++;
         }
         for (int i = 100; i < 999; i += 2) {
-            if (helper (i, arr)) {
+            if (helper(i, arr)) {
                 list.add(i);
             }
         }
@@ -17,9 +20,9 @@ class Solution {
         return ans;
     }
 
-    private boolean helper (int num, int[] arr) {
+    private boolean helper(int num, int[] arr) {
         int[] temp = new int[10];
-        for (char c: String.valueOf(num).toCharArray()) {
+        for (char c : String.valueOf(num).toCharArray()) {
             temp[Integer.parseInt(String.valueOf(c))]++;
         }
         for (int i = 0; i < 10; i++) {
