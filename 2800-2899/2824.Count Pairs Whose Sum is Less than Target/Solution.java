@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int countPairs(List<Integer> nums, int target) {
         int ans = 0;

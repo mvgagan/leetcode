@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         int max = 0;

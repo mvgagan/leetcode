@@ -14,7 +14,7 @@ class Solution {
     }
 }
 
-class Solution {
+class Solution1 {
     public String firstPalindrome(String[] words) {
         for (String str : words) {
             if (helper(str)) {
